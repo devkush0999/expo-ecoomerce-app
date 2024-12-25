@@ -3,9 +3,8 @@ import React from "react";
 import { Link, Stack } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "@/constants/Colors";
-import { Ionicons } from "@expo/vector-icons"; 
-import Google from '@/assets/images/google-logo.svg'
-import { Image } from "react-native-svg";
+import { Ionicons } from "@expo/vector-icons";
+import Google from '@/assets/images/google-logo.svg';
 
 type Props = {};
 
@@ -19,37 +18,38 @@ const WelcomeScreen = (props: Props) => {
             <Text style={styles.titleLogo}>DeveX</Text>
             <Text style={styles.description}>one shop one solotion</Text>
             <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
-              <TouchableOpacity style={styles.socialLoginButton}>
-                <Ionicons name="mail-outline" size={20} color={Colors.black} />
-                <Text style={styles.title}>Continue with Email</Text>
-              </TouchableOpacity>
-            </Link>
+              <Link href={"/signin"} asChild>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  <Ionicons name="mail-outline" size={20} color={Colors.black} />
+                  <Text style={styles.title}>Continue with Email</Text>
+                </TouchableOpacity>
+              </Link>
             </View>
             <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
-              <TouchableOpacity style={styles.socialLoginButton}>
-                {/* <Ionicons name="logo-google" size={20} color={Colors.black} /> */}
-                <Google width={20} height={20} />
-                <Text style={styles.title}>Continue with Google</Text>
-              </TouchableOpacity>
-            </Link>
+              <Link href={"/signin"} asChild>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  {/* <Ionicons name="logo-google" size={20} color={Colors.black} /> */}
+                  <Google width={20} height={20} />
+                  <Text style={styles.title}>Continue with Google</Text>
+                </TouchableOpacity>
+              </Link>
             </View>
             <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
-              <TouchableOpacity style={styles.socialLoginButton}>
-                <Ionicons name="logo-apple" size={20} color={Colors.black} />
-                <Text style={styles.title}>Continue with Apple</Text>
-              </TouchableOpacity>
-            </Link>
+              <Link href={"/signin"} asChild>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  <Ionicons name="logo-apple" size={20} color={Colors.black} />
+                  <Text style={styles.title}>Continue with Apple</Text>
+                </TouchableOpacity>
+              </Link>
             </View>
+            <Text style={styles.loginTxt}>Already have an account?
 
-
-            <Link href={"/signup"} asChild>
-              <TouchableOpacity>
-                <Text>Go to SignUp Screen</Text>
-              </TouchableOpacity>
-            </Link>
+              <Link href={"/signup"} asChild>
+                <TouchableOpacity>
+                  <Text style={styles.title}> SignUp</Text>
+                </TouchableOpacity>
+              </Link>
+            </Text>
           </View>
         </LinearGradient>
       </View>
@@ -102,11 +102,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
 
   },
-  socialLoginWrapper:{
+  socialLoginWrapper: {
     // flexDirection: 'row',
-    alignSelf:'stretch',
+    alignSelf: 'stretch',
   },
-  button:{
+  button: {
     width: 150,
   },
   socialLoginButton: {
@@ -118,8 +118,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     // borderColor: '#ddd',
     justifyContent: 'space-between',
-    alignSelf:'center',
+    alignSelf: 'center',
     marginBottom: 10,
-    },
+  },
+  loginTxt: {
+    fontSize: 12,
+  }
 
 });
